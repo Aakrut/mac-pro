@@ -1,0 +1,35 @@
+css-gallery {
+  display: grid;
+  position: relative;
+  background: black;
+  place-items: center;
+  color: white;
+  counter-reset: gallery;
+}
+
+gallery-item {
+  --scale: 0.6;
+  --transform: scale(var(--scale)) rotate(var(--rotate, 0));
+  position: sticky;
+  display: flex;
+  transform: var(--transform);
+  transition: var(--transition);
+  top: 0;
+  box-sizing: border-box;
+  width: 100vmin;
+  height: 100vmin;
+  justify-content: center;
+  --radius: calc(var(--base) / 5);
+  margin-bottom: 10vh;
+}
+
+gallery-item > * {
+  outline: none;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: var(--radius);
+  width: 100%;
+  height: 100%;
+  box-shadow: 60px 0 180px 5px black, 0 -100px 280px black;
+  transition: var(--transition);
+}
