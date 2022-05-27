@@ -3,6 +3,8 @@
 @import "stripes.css";
 @import "mix.css";
 @import "gallery.css";
+@import "list.css";
+@import "slide.css";
 
 body {
   background-color: black;
